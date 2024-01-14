@@ -1,5 +1,10 @@
 import streamlit as st
 import pandas as pd
+import sys
+import streamlit as st
+
+st.write("Python Executable:", sys.executable)
+st.write("Python Path:", sys.path)
 
 def calculate_scene_metrics(scene_df):
     scene_df['CV'] = (scene_df['Wpolygons'] + scene_df['Wvertex'] + scene_df['Wobject'] + scene_df['Wlight'] + scene_df['Wmaterials']) / 5
